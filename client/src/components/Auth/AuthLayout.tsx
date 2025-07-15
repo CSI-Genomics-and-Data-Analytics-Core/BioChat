@@ -60,7 +60,7 @@ function AuthLayout({
     <div className="relative flex min-h-screen flex-col bg-white dark:bg-gray-900">
       <Banner />
       <BlinkAnimation active={isFetching}>
-        <div className="mt-6 h-20 w-full bg-cover">
+        <div className="mt-6 h-20 w-full bg-cover bg-white dark:bg-white">
           <img
             src="/assets/gedac_logo.png"
             className="h-full w-full object-contain"
