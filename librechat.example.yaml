@@ -27,11 +27,10 @@ cache: true
 
 # Custom interface configuration
 interface:
-  customWelcome: 'Welcome to LibreChat! Enjoy your experience.'
-  # Enable/disable file search as a chatarea selection (default: true)
-  # Note: This setting does not disable the Agents File Search Capability.
-  # To disable the Agents Capability, see the Agents Endpoint configuration instead.
-  fileSearch: true
+  customWelcome: "Welcome to GeDaC Genomics Assistant! Enjoy your experience."
+  # MCP Servers UI configuration
+  mcpServers:
+    placeholder: 'MCP Servers'
   # Privacy policy settings
   privacyPolicy:
     externalUrl: 'https://librechat.ai/privacy-policy'
@@ -161,20 +160,20 @@ actions:
 #     # type: sse # type can optionally be omitted
 #     url: http://localhost:3001/sse
 #     timeout: 60000  # 1 minute timeout for this server, this is the default timeout for MCP servers.
-#   puppeteer:
-#     type: stdio
-#     command: npx
-#     args:
-#       - -y
-#       - "@modelcontextprotocol/server-puppeteer"
-#     timeout: 300000  # 5 minutes timeout for this server
-#   filesystem:
-#     # type: stdio
-#     command: npx
-#     args:
-#       - -y
-#       - "@modelcontextprotocol/server-filesystem"
-#       - /home/user/LibreChat/
+  puppeteer:
+    type: stdio
+    command: npx
+    args:
+      - -y
+      - "@modelcontextprotocol/server-puppeteer"
+    timeout: 300000  # 5 minutes timeout for this server
+  filesystem:
+    # type: stdio
+    command: npx
+    args:
+      - -y
+      - "@modelcontextprotocol/server-filesystem"
+      - /home/user/LibreChat/
 #     iconPath: /home/user/LibreChat/client/public/assets/logo.svg
 #   mcp-obsidian:
 #     command: npx
